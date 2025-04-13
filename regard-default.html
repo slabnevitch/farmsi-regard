@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Описание страницы">
+    <meta name="format-detection" content="telephone=no">
+    <title>Страница благодарности - Дефолт</title>
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="144x144">
+    <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b603dd45-d3d4-4cc6-bc5e-3985d0624e53&lang=ru_RU"></script>
+<script defer src="main.0578cae5ce3857ad10d4.js"></script></head>
+
+<body>
+<div class="site">
+
+    <!-- Header Start-->
+    <!-- Header Top-->
+    <div class="header__top">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="d-flex align-items-center me-3">
+                    <div class="header__location location">
+                        <a class="location__current" href="javascript:void(0)">
+                            <svg class="location__icon">
+                                <use xlink:href="images/sprites.svg#pin"></use>
+                            </svg>
+                            <span class="js-city-choosen-city">Москва и МО</span>
+                        </a>
+                    </div>
+                    <div class="header__saving d-flex align-items-center">
+                        <svg class="header__saving-icon" width="24" height="24">
+                            <use xlink:href="images/sprites.svg#Pills"></use>
+                        </svg>
+                        Бронируйте товары в аптеках, экономьте до 30%<a class="header__saving-link"
+                                                                        href="#">Подробнее </a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center"><a class="header__top-link" href="#">Как заказать</a><a
+                        class="header__top-link" href="#">Доставка и оплата</a><a class="header__top-link"
+                                                                                  href="#">Помощь</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Middle-->
+    <div class="header-nav">
+        <div class="header__middle header__fixed">
+            <div class="container" style="position: relative">
+                <div class="city-popup js-city-popup">
+                    <button type="button" class="city-change__close" onclick="$('.js-city-popup').fadeOut(300);">
+                        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="city-popup__subtitle">Ваш регион</div>
+                    <div class="city-popup__title"><span class="js-city-choosen-city">Московская область</span>?</div>
+                    <div class="city-popup__text">
+                        Цены и наличие в аптеках зависят<br>
+                        от выбранного региона
+                    </div>
+                    <div class="city-popup__buttons">
+                        <button class="button button-primary js-submit-location" type="button">
+                            Да
+                        </button>
+                        <button class="button button-solid js-change-location" type="button">
+                            Выбрать другой
+                        </button>
+                    </div>
+                </div>
+
+                <div class="city-popup js-city-selected-popup">
+                    <button type="button" class="city-change__close"
+                            onclick="$('.js-city-selected-popup').fadeOut(300);">
+                        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="city-popup__subtitle">Регион изменён</div>
+                    <div class="city-popup__title js-city-choosen-city">Московская область</div>
+                    <div class="city-popup__text">
+                        Цены и наличие теперь будут отображаться<br>
+                        для выбранного региона
+                    </div>
+                    <div class="city-popup__buttons">
+                        <button class="button button-primary js-submit-location"
+                                onclick="$('.js-city-selected-popup').fadeOut(300);" type="button">
+                            Понятно
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                    <a class="header__logo logo" href="/">
+                        <img class="logo__image"
+                             src="logo.svg"
+                             alt="logo" width="168"
+                             height="56">
+                    </a>
+                    <div class="header__search search">
+                        <form class="search__form d-flex align-items-center" action="/" autocomplete="off">
+                            <div class="form-group w-100">
+                                <input class="search__input big__input js-searchInput" type="text" name="q"
+                                       placeholder="Поиск лучших цен..">
+                                <svg class="search__icon">
+                                    <use xlink:href="images/sprites.svg#loupe"></use>
+                                </svg>
+                                <svg class="search__loading">
+                                    <use xlink:href="images/sprites.svg#loading"></use>
+                                </svg>
+                                <button class="search__clear js-qclear" type="button"></button>
+                            </div>
+                            <button class="button button-big" type="submit">Найти</button>
+                            <div class="search__result">
+
+                            </div>
+                        </form>
+                        <div class="search__backdrop"></div>
+                    </div>
+                    <div class="header__links"><a class="header__link" href="#">
+                        <div class="header__link-icon">
+                            <svg>
+                                <use xlink:href="images/sprites.svg#Exit"></use>
+                            </svg>
+                        </div>
+                        Войти
+                    </a><a class="header__link" href="#">
+                        <div class="header__link-icon">
+                            <svg>
+                                <use xlink:href="images/sprites.svg#Bag"></use>
+                            </svg>
+                        </div>
+                        Заказы
+                    </a><a class="header__link" href="#">
+                        <div class="header__link-icon">
+                            <svg>
+                                <use xlink:href="images/sprites.svg#Cart"></use>
+                            </svg>
+                            <span class="header__link-counter">99+</span>
+                        </div>
+                        Корзина
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <nav class="header__menu">
+                <div class="header__list">
+                    <div class="js-navSlider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Лекарственные
+                                средства</a></div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Витамины</a>
+                            </div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link" href="#">БАД</a>
+                            </div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link" href="#">Похудение
+                                и
+                                питание</a></div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Косметика</a>
+                            </div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link" href="#">Мама и
+                                малыш</a></div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Гигиена</a>
+                            </div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Медицинские
+                                изделия</a></div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Медицинская
+                                техника</a></div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link"
+                                                                       href="#">Ортопедия</a>
+                            </div>
+                            <div class="swiper-slide header__slide"><a class="header__list-link" href="#">Оптика</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-navigation--prev small-navigation--disabled header__button--prev">
+                        <svg class="small-navigation__icon">
+                            <use xlink:href="images/sprites.svg#triangle-left"></use>
+                        </svg>
+                    </div>
+                    <div class="small-navigation--next header__button--next">
+                        <svg class="small-navigation__icon">
+                            <use xlink:href="images/sprites.svg#triangle-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__submenu submenu">
+                    <div class="submenu__item">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <div class="submenu__links"><a class="submenu__link" href="#">Бальзамы и
+                                    кондиционеры</a><a class="submenu__link" href="#">Депиляция и бритье</a><a
+                                        class="submenu__link" href="#">Средства после загара</a><a
+                                        class="submenu__link" href="#">Шампуни</a><a class="submenu__link"
+                                                                                     href="#">Омоложение</a><a
+                                        class="submenu__link" href="#">Средства
+                                    от загара</a><a class="submenu__link" href="#">Уход за телом</a><a
+                                        class="submenu__link" href="#">Сухие шампуни</a><a class="submenu__link"
+                                                                                           href="#">Окрашивание бровей
+                                    и ресниц</a><a class="submenu__link" href="#">Уход за лицом</a><a
+                                        class="submenu__link" href="#">Антицеллюлитный уход</a><a
+                                        class="submenu__link" href="#">Патчи под
+                                    глаза</a><a class="submenu__link" href="#">Сухие шампуни</a><a
+                                        class="submenu__link" href="#">Окрашивание
+                                    бровей и ресниц</a><a class="submenu__link" href="#">Уход за лицом</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="submenu__links"><a class="submenu__link" href="#">Сухие шампуни</a><a
+                                        class="submenu__link" href="#">Депиляция и бритье</a><a
+                                        class="submenu__link" href="#">Уход за
+                                    телом</a><a class="submenu__link" href="#">Шампуни</a><a
+                                        class="submenu__link" href="#">Бальзамы и
+                                    кондиционеры</a><a class="submenu__link" href="#">Омоложение</a><a
+                                        class="submenu__link" href="#">Средства от загара</a><a
+                                        class="submenu__link" href="#">Средства после
+                                    загара</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <div class="submenu__title">Бренды</div>
+                                <div class="submenu__items"><a class="submenu__brand" href="#"
+                                                               title="Наименование бренда"><img
+                                        src="images/brands/Logo_Zdrav.jpg"
+                                        alt="Logo_Zdrav" width="196" height="98"></a><a class="submenu__brand"
+                                                                                        href="#"
+                                                                                        title="Наименование бренда"><img
+                                        src="images/brands/Magnit.jpg"
+                                        alt="Magnit" width="196" height="98"></a><a class="submenu__brand"
+                                                                                    href="#"
+                                                                                    title="Наименование бренда"><img
+                                        src="images/brands/Logo_Zdrav.jpg" alt="Logo_Zdrav" width="196"
+                                        height="98"></a><a class="submenu__brand" href="#"
+                                                           title="Наименование бренда"><img
+                                        src="images/brands/Magnit.jpg"
+                                        alt="Magnit" width="196" height="98"></a><a class="submenu__brand"
+                                                                                    href="#"
+                                                                                    title="Наименование бренда"><img
+                                        src="images/brands/Logo_Zdrav.jpg" alt="Logo_Zdrav" width="196"
+                                        height="98"></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="submenu__title">Хиты продаж</div>
+                                <div class="submenu__items"><a class="submenu__cart" href="#"><img
+                                        class="submenu__cart-image" src="images/products/product-1.png"
+                                        width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Супрастин (для инъекций), 20 мг/мл,
+                                            раствор для
+                                            внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт.
+                                        </div>
+                                        <div class="submenu__cart-price">от 1 700 ₽</div>
+                                    </div>
+                                </a><a class="submenu__cart" href="#"><img class="submenu__cart-image"
+                                                                           src="images/products/product-5.png"
+                                                                           width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Супрастин (для инъекций), 20 мг/мл,
+                                            раствор для
+                                            внутривенного, 10 мг/мл
+                                        </div>
+                                        <div class="submenu__cart-price">от 988 ₽</div>
+                                    </div>
+                                </a><a class="submenu__cart" href="#"><img class="submenu__cart-image"
+                                                                           src="images/products/product-2.png"
+                                                                           width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Цетрин, 10 мг, таблетки, покрытые
+                                            пленочной
+                                            оболочкой, 20 шт.
+                                        </div>
+                                        <div class="submenu__cart-price">от 320 ₽</div>
+                                    </div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submenu__item">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <div class="submenu__links"><a class="submenu__link" href="#">Бальзамы и
+                                    кондиционеры</a><a class="submenu__link" href="#">Депиляция и бритье</a><a
+                                        class="submenu__link" href="#">Средства после загара</a><a
+                                        class="submenu__link" href="#">Шампуни</a><a class="submenu__link"
+                                                                                     href="#">Омоложение</a><a
+                                        class="submenu__link" href="#">Средства
+                                    от загара</a><a class="submenu__link" href="#">Уход за телом</a><a
+                                        class="submenu__link" href="#">Сухие шампуни</a><a class="submenu__link"
+                                                                                           href="#">Окрашивание бровей
+                                    и ресниц</a><a class="submenu__link" href="#">Уход за лицом</a><a
+                                        class="submenu__link" href="#">Антицеллюлитный уход</a><a
+                                        class="submenu__link" href="#">Патчи под
+                                    глаза</a><a class="submenu__link" href="#">Сухие шампуни</a><a
+                                        class="submenu__link" href="#">Окрашивание
+                                    бровей и ресниц</a><a class="submenu__link" href="#">Уход за лицом</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="submenu__links"><a class="submenu__link" href="#">Сухие шампуни</a><a
+                                        class="submenu__link" href="#">Депиляция и бритье</a><a
+                                        class="submenu__link" href="#">Уход за
+                                    телом</a><a class="submenu__link" href="#">Шампуни</a><a
+                                        class="submenu__link" href="#">Бальзамы и
+                                    кондиционеры</a><a class="submenu__link" href="#">Омоложение</a><a
+                                        class="submenu__link" href="#">Средства от загара</a><a
+                                        class="submenu__link" href="#">Средства после
+                                    загара</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="submenu__title">Хиты продаж</div>
+                                <div class="submenu__items"><a class="submenu__cart" href="#"><img
+                                        class="submenu__cart-image" src="images/products/product-1.png"
+                                        width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Супрастин (для инъекций), 20 мг/мл,
+                                            раствор для
+                                            внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт.
+                                        </div>
+                                        <div class="submenu__cart-price">от 1 700 ₽</div>
+                                    </div>
+                                </a><a class="submenu__cart" href="#"><img class="submenu__cart-image"
+                                                                           src="images/products/product-5.png"
+                                                                           width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Супрастин (для инъекций), 20 мг/мл,
+                                            раствор для
+                                            внутривенного, 10 мг/мл
+                                        </div>
+                                        <div class="submenu__cart-price">от 988 ₽</div>
+                                    </div>
+                                </a><a class="submenu__cart" href="#"><img class="submenu__cart-image"
+                                                                           src="images/products/product-2.png"
+                                                                           width="86" height="86">
+                                    <div class="submenu__cart-info">
+                                        <div class="submenu__cart-name">Цетрин, 10 мг, таблетки, покрытые
+                                            пленочной
+                                            оболочкой, 20 шт.
+                                        </div>
+                                        <div class="submenu__cart-price">от 320 ₽</div>
+                                    </div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End-->
+    <div class="cart-confmessage">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center column-gap-1">
+                    <div class="cart-confmessage__text">В корзине остались товары, отсутствующие в выбранной аптеке. Вы можете оформить на них отдельный заказ в другую аптеку
+                    </div>
+                    <a href="#" class="button button-secondary cart-confmessage__to-cart">Вернуться в корзину</a>
+
+                    <button type="button" class="cart-confmessage__close align-self-start">
+                        <svg class="icon-message-close">
+                            <use xlink:href="images/sprites.svg#message-close"></use>
+                        </svg>   
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main section-->
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="regard">
+                        <div class="regard__top regard__block">
+                            <div class="regard__title">Спасибо за заказ!
+                               <svg class="icon-status" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_457_9344)">
+                                    <path d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#00C293"/>
+                                    <path d="M20.8368 10.0078L13.7999 18.7386C13.5414 19.0588 13.1074 19.25 12.638 19.25C12.2228 19.25 11.8295 19.1001 11.56 18.8384L7.23173 14.6492C6.88614 14.3146 6.93192 13.823 7.33683 13.5301C7.73013 13.2446 8.39101 13.2391 8.79334 13.5187L12.4711 16.0728L19.0528 9.08472C19.3803 8.73715 20.0592 8.64331 20.5235 8.88363C21.0057 9.13338 21.1437 9.62742 20.8368 10.0078Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_457_9344">
+                                    <rect width="28" height="28" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="regard__text">
+                                <p class="regard__par">Заказ №156354 создан и принят в обработку.<br> Уведомление о готовности заказа вы получите в СМС.</p>
+                            </div>
+
+                            <button class="regard__improve button button-solid w-100" data-bs-toggle="modal" data-bs-target="#improveModal">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.164 0.478215L6.5 5.00022V12.0002L7.248 12.2672L6.121 14.5212C5.861 15.0402 5.84 15.6442 6.061 16.1802C6.284 16.7162 6.726 17.1292 7.277 17.3132L11.361 18.6742C11.566 18.7422 11.777 18.7752 11.985 18.7752C12.726 18.7752 13.436 18.3612 13.782 17.6712L15.085 15.0652L19.164 16.5222C19.814 16.7552 20.5 16.2722 20.5 15.5812V1.41922C20.5 0.728216 19.814 0.245215 19.164 0.478215ZM11.993 16.7772L7.91 15.4162L9.145 12.9452L13.187 14.3892L11.993 16.7772ZM2.5 12.0002H4.5V5.00022H2.5C1.397 5.00022 0.5 5.89722 0.5 7.00022V10.0002C0.5 11.1032 1.397 12.0002 2.5 12.0002Z" fill="#ABB6CC"/>
+                                </svg>
+                                Что улучшить в оформлении заказа?
+                            </button>
+                        </div>
+
+                        <div class="regard__block">
+                            <div class="regard__subtitle">Статус заказа</div>
+                            <div class="regard__text">
+                                <p class="regard__par">Следите за статусом и делитесь ссылкой,<br> если заказ должен забрать другой получатель </p>
+                                <p class="regard__par">Посмотреть детали заказа можно в <a href="#">личном кабинете</a></p>
+                            </div>
+                            <div class="regard__buttons">
+                                <a href="#" class="regard__btn button button-solid">
+                                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs>
+                                            <clipPath id="clip7_1838">
+                                                <rect id="Share_20" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#clip7_1838)">
+                                            <path id="Vector" d="M6.5 14.5C5.11 14.5 4 13.38 4 12C4 10.61 5.11 9.5 6.5 9.5C7.88 9.5 9 10.61 9 12C9 13.38 7.88 14.5 6.5 14.5Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                            <path id="Vector" d="M9 10L14 6.5" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                            <path id="Vector" d="M9 14L14 17.5" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                            <path id="Vector" d="M16.5 21C15.11 21 14 19.88 14 18.5C14 17.11 15.11 16 16.5 16C17.88 16 19 17.11 19 18.5C19 19.88 17.88 21 16.5 21Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                            <path id="Vector" d="M16.5 8C15.11 8 14 6.88 14 5.5C14 4.11 15.11 3 16.5 3C17.88 3 19 4.11 19 5.5C19 6.88 17.88 8 16.5 8Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                        </g>
+                                    </svg>
+                                    Поделиться статусом
+                                </a>
+
+                                <a href="#" class="regard__btn button button-solid">
+                                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Vector" d="M13 11L21 3M21 7.75L21 3L16.25 3" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                        <path id="Vector" d="M21 12C21 16.24 21 18.36 19.68 19.68C18.36 21 16.24 21 12 21C7.75 21 5.63 21 4.31 19.68C3 18.36 3 16.24 3 12C3 7.75 3 5.63 4.31 4.31C5.63 3 7.75 3 12 3" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                    </svg>
+                                    Статус в новом окне
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="regard__details details-regard">
+                            <div class="details-regard__inner">
+                                <div class="regard__block">
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">3 товара</div>
+                                    </div>
+
+                                    <div class="confirm-products">
+                                        <div class="confirm-products__row">
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-1@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-2@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-8.png" alt="alt">
+                                            </div>
+                                        </div>
+
+                                        <div class="confirm-products__expand">
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-1@2x.png" alt="alt">
+                                                </a>
+                                                <div class="expand-confirm-product__name">
+                                                    <a href="#" class="expand-confirm-product__name-text">
+                                                        Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного, (для инъекций), 20 мг/мл, раствор для внутривенного, 10
+                                                    </a>
+                                                    <div class="product-info__bottom">
+                                                        <span class="product__description-icon">
+                                                            <svg viewBox="0 0 24 24">
+                                                                <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" stroke="#ABB6CC" stroke-width="2"></path>
+                                                                <path d="M12 8L12 10M12 10L12 12M12 10H9.99998M12 10L14 10" stroke="#EB135B" stroke-width="2" stroke-linecap="round"></path>
+                                                                <path d="M8 18L16 18" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                                            </svg>
+                                                            По рецепту
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-2@2x.png" alt="alt">
+                                                </a>
+                                                <a href="#" class="expand-confirm-product__name">Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного.</a>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-8.png" alt="alt">
+                                                </a>
+                                                <a href="#" class="expand-confirm-product__name">Раствор для внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт. капли</a>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                        </div>
+
+                                        <button type="button" class="confirm-products__toggler">
+                                            <span>Подробнее о товарах</span>
+                                        </button>
+                                    </div><!-- confirm-products -->
+
+                                    
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block">
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">Самовывоз из аптеки</div>
+                                    </div>
+                                    <div class="confirm-location">
+                                        <div class="pricelist__company">
+                                            <img class="pricelist__logo" src="images/apteki/magnit_logo.png" alt="">
+                                            <span class="pricelist__name">Магнит аптека
+                                            </span>
+                                        </div>
+                                        <div class="confirm-location__info">
+                                            <div class="pricelist__address">Серпуховский Вал ул, 21 к 4</div>
+                                            <div class="pricelist__subway">Красные ворота</div>
+                                            <div class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</div>
+                                        </div>
+
+                                        <div class="confirm-payment">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-pay-clock">
+                                                        <use xlink:href="images/sprites.svg#pay-clock"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">8 минут</span>
+                                                <span class="confirm-payment__key">Среднее время сбора</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#credit-card"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только карта</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-sms">
+                                                        <use xlink:href="images/sprites.svg#sms"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Отправим СМС</span>
+                                                <span class="confirm-payment__key">Когда заказ будет готов</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+                                    </div>
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block" data-tooltip-supplier-info>
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">Самовывоз из аптеки</div>
+                                        <a href="#" class="confirm-header__link">Изменить аптеку</a>
+                                    </div>
+                                    <div class="confirm-location">
+                                        <div class="pricelist__company">
+                                            <img class="pricelist__logo" src="images/apteki/magnit_logo.png" alt="">
+                                            <span class="pricelist__name">Магнит аптека
+                                            </span>
+                                        </div>
+
+                                        <div class="confirm-location__info confirm-location__info--supplier">
+                                            <div class="pricelist__address">Серпуховский Вал ул, 21 к 4</div>
+                                            <div class="pricelist__subway">Красные ворота</div>
+                                            <div class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</div>
+                                        </div>
+
+                                        <div class="confirm-supplier">
+                                            <div class="confirm-supplier__icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-supplier-info]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackplacements="['top']" data-bs-custom-class="confirm-supplier-tooltip" data-bs-title="Товар поступит в аптеку 23 октября от поставщика Polza.ru. Забрать заказ вы сможете после получения СМС о готовности заказа" data-bs-html="true" title="" data-bs-original-title="">
+                                                    <g clip-path="url(#clip0_465_4033)">
+                                                    <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#F2F2F5"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15C9.44772 15 9 14.5523 9 14L9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10L11 14C11 14.5523 10.5523 15 10 15Z" fill="#ABB6CC"></path>
+                                                    <path d="M11.25 6.25C11.25 5.55964 10.6904 5 10 5C9.30964 5 8.75 5.55964 8.75 6.25C8.75 6.94036 9.30964 7.5 10 7.5C10.6904 7.5 11.25 6.94036 11.25 6.25Z" fill="#ABB6CC"></path>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_465_4033">
+                                                    <rect width="20" height="20" fill="white"></rect>
+                                                    </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="confirm-supplier__body">
+                                                <div class="confirm-payment__item">
+                                                    <span class="confirm-payment__icon">
+                                                        <img src="images/brands/Polza_logo.svg" alt="alg">
+                                                    </span>
+                                                    <span class="confirm-payment__val">Polza.ru</span>
+                                                    <span class="confirm-payment__key">Поставщик в аптеку</span>
+                                                </div><!-- confirm-payment__item -->
+
+                                                <div class="confirm-payment__item">
+                                                    <span class="confirm-payment__icon">
+                                                        <svg class="icon-pay-clock">
+                                                            <use xlink:href="images/sprites.svg#pay-clock"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="confirm-payment__val">Завтра, 23 октября</span>
+                                                    <span class="confirm-payment__key">Доставит в аптеку</span>
+                                                </div><!-- confirm-payment__item -->
+                                            </div>
+                                        </div>
+
+                                        <div class="confirm-payment">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#card-cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Карта, наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-sms">
+                                                        <use xlink:href="images/sprites.svg#sms"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Отправим СМС</span>
+                                                <span class="confirm-payment__key">Когда заказ будет готов</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+
+                                        <div class="confirm-payment" style="margin-top: 24px;">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#card-cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Карта, наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#credit-card"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только карта</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+                                    </div>
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block">
+                                    <div class="order-overall order-overall--regard">
+                                        <div class="order-overall__top">
+                                            <div class="order-overall__titlle">Детали</div>
+                                            <div class="order-overall__info">
+                                                <div class="order-overall__key">Будет готов</div>
+                                                <div class="order-overall__val">Через 30 мин</div>
+                                                <div class="order-overall__key">Хранение до</div>
+                                                <div class="order-overall__val">20 октября 19:00</div>
+                                                <div class="order-overall__key">Оплата при получении</div>
+                                                <div class="order-overall__val">Только карта</div>
+                                            </div>
+                                            <div class="order-overall__result">
+                                                <div class="order-overall__items">Итого</div>
+                                                <div class="order-overall__price">15 747 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="details-regard__toggle">Детали заказа</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex h-100"><img class="footer__top-image" src="images/icons/icon.png"
+                                                       srcset="images/icons/icon@2x.png" alt="icon" width="159"
+                                                       height="159">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="footer__top-title">Выгода в почте</div>
+                                <div class="footer__top-subtitle">
+                                    Подпишитесь и получайте <br> акции
+                                    и подборки товаров
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form class="d-flex form-group">
+                            <input class="big__input big__input--white" type="email" name="email"
+                                   placeholder="E-mail">
+                            <button class="button button-big" type="submit">Подписаться</button>
+                        </form>
+                        <div class="footer__policy">Нажимая «Подписаться» вы&nbsp;соглашаетесь с&nbsp;<a
+                                class="footer__policy-link" href="#" target="_blank" rel="nofollow">Пользовательским
+                            соглашением</a><br>и&nbsp;<a class="footer__policy-link" href="#" target="_blank"
+                                                         rel="nofollow">Политикой обработки персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__middle footer-middle">
+                <div class="footer-middle__row">
+                    <div class="footer-middle__block">
+                        <div class="footer__title">Покупателям</div>
+                        <div class="footer__items">
+                            <a class="footer__link" href="/how-order.html">Как сделать заказ</a>
+                            <a class="footer__link" href="/pay.html">Оплата</a><a class="footer__link"
+                                                                                  href="/deliver.html">Доставка</a><a
+                                class="footer__link" href="/faqs.html">Вопросы и
+                            ответы</a><a class="footer__link" href="/catalog.html">Каталог</a><a
+                                class="footer__link" href="/manufacturer.html">Производители</a><a
+                                class="footer__link" href="/med-cities.html">Лекарства в
+                            городах</a>
+                        </div>
+                    </div>
+                    <div class="footer-middle__block">
+                        <div class="footer__title">Компания</div>
+                        <div class="footer__items">
+                            <a class="footer__link" href="/about.html">О нас</a>
+                            <a class="footer__link" href="/contact.html">Контакты</a>
+                            <a class="footer__link" href="/pharmacies.html">Аптеки</a><a class="footer__link"
+                                                                                         href="/regions.html">Регионы</a><a
+                                class="footer__link" href="/partners.html">Наши
+                            партнеры</a><a class="footer__link" href="/callback.html">Обратная связь</a><a
+                                class="footer__link" href="/conect-pharm.html">Подключение
+                            аптек</a>
+                        </div>
+                    </div>
+                    <div class="footer-middle__block">
+                        <div class="footer__title">Правовая информация</div>
+                        <div class="footer__items">
+                            <a class="footer__link" href="/term-use.html">Пользовательское соглашение</a>
+                            <a class="footer__link" href="/policy.html">Политика обработки персональных данных</a>
+                            <a class="footer__link" href="/policy-callback.html">Политика обработки отзывов</a>
+                            <a class="footer__link" href="/sell-remotely.html">Продажа дистанционным способом</a>
+                            <a class="footer__link" href="/licenses.html">Лицензии и разрешения</a><a
+                                class="footer__link" href="/requisites.html">Реквизиты</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle__row">
+                    <div class="footer-middle__block">
+                        <div class="footer__number">+7 (495) 954-47-32</div>
+                        <div class="socials justify-content-end"><a class="socials__link socials__link--vk" href="#"
+                                                                    title="vk">
+                            <svg class="socials__icon">
+                                <use xlink:href="images/sprites.svg#vk"></use>
+                            </svg>
+                        </a><a class="socials__link socials__link--ok" href="#" title="ok">
+                            <svg class="socials__icon">
+                                <use xlink:href="images/sprites.svg#ok"></use>
+                            </svg>
+                        </a><a class="socials__link socials__link--tg" href="#" title="tg">
+                            <svg class="socials__icon">
+                                <use xlink:href="images/sprites.svg#tg"></use>
+                            </svg>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col-12 col-md-9">
+                        <div class="footer__text">ООО «ФАРМСИ», ИНН 6162088627, 344116, Ростовская область, г.
+                            Ростов-на-Дону, ул. Батуринская, дом 15/15, офис 12<br>Информация, размещенная на сайте,
+                            носит ознакомительный характер и не является публичной офертой, определяемой п. 2 ст.
+                            437 ГК
+                            РФ.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mt-auto">
+                        <div class="footer__text text-end">© 2022 <a href="#" class="font-primary">ФАРМСИ в
+                            Ростове-на-Дону</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="scroll-up scroll-up--hidden is-active">
+    <svg class="scroll-up__icon">
+        <use xlink:href="images/sprites.svg#arrow-up"></use>
+    </svg>
+</div>
+
+<div class="toast fade hide">
+    <div class="toast-body">
+        <div class="d-flex align-items-center"><img class="toast-image" src="images/products/product-3.png" alt=""
+                                                    width="66" height="66">
+            <div class="d-flex align-items-center toast-inner">
+                <div class="text-white toast-text">Товар добавлен в корзину</div>
+                <a class="toast-button" href="#">Перейти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="segmented-control js-segmented" style="display: none;">
+
+    <input type="radio" name="segmented-control" value="photos" id="tab-1">
+    <label for="tab-1" class="segmented-control__1">
+        <p>Фото</p>
+    </label>
+
+    <input type="radio" name="segmented-control" value="certs" id="tab-2">
+    <label for="tab-2" class="segmented-control__2">
+        <p>Сертификаты</p>
+    </label>
+    <div class="segmented-control__color"></div>
+</button>
+
+<div class="modal fade" id="cityChangeModal" tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered city-change-modal">
+        <div class="city-change modal-content">
+            <button type="button" class="city-change__close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="modal__header city-change__header">
+                <p class="city-change__title">Выберите город</p>
+                <div class="city-change__define">
+                    <svg class="city-change__define-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.25 18.4993L15.8333 5.16602L2.5 9.74935L7.95416 11.931C8.46237 12.1343 8.86505 12.537 9.06833 13.0452L11.25 18.4993Z"
+                              stroke="#00C293" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <div class="city-change__loading city-change__define-loading">
+                        <div class="button--loading"></div>
+                    </div>
+
+                    Определить
+                </div>
+            </div>
+            <div class="modal__body city-change__body">
+                <div class="city-change__choosen">
+                    <svg class="city-change__choosen-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.71159 18.8511L10 19.9994L11.2884 18.8511C15.4026 15.1846 17.5 11.9276 17.5 8.87888C17.5 4.55054 14.1783 1.25 10 1.25C5.82171 1.25 2.5 4.55054 2.5 8.87888C2.5 11.9276 4.59737 15.1846 8.71159 18.8511ZM13.75 8.75C13.75 6.67893 12.0711 5 10 5C7.92893 5 6.25 6.67893 6.25 8.75C6.25 10.8211 7.92893 12.5 10 12.5C12.0711 12.5 13.75 10.8211 13.75 8.75Z"
+                              fill="#ABB6CC"/>
+                    </svg>
+                    <div class="city-change__loading city-change__choosen-loading">
+                        <div class="button--loading"></div>
+                    </div>
+                    <div class="city-change__choosen-text">Выбран:</div>
+                    <div class="city-change__choosen-text city-change__choosen-text--city js-city-choosen-city">
+                        Ростов-на-Дону
+                    </div>
+                    <div class="city-change__choosen-text city-change__choosen-text--region js-city-choosen-region">
+                        Ростовская область, очень длинный текст рег
+                    </div>
+                </div>
+                <div class="form-group w-100" style="margin-bottom: 24px;">
+                    <input class="city-change__input js-city-search-input" type="text" name="city"
+                           placeholder="Город или регион">
+                    <svg class="city-change__input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2477_21238)">
+                            <circle cx="7.91667" cy="7.91667" r="7.91667" transform="matrix(-1 0 0 1 18.3334 1.66602)"
+                                    stroke="#ABB6CC" stroke-width="2"/>
+                            <path d="M4.58337 15.416L1.66671 18.3327" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2477_21238">
+                                <rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="city-change__loading city-change__input-loading">
+                        <div class="button--loading"></div>
+                    </div>
+                    <button class="city-change__input-clear" onclick="$('.js-city-search-input').val('')" type="button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.66663 2.66797L13.3333 13.3346" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.3334 2.66797L2.66671 13.3346" stroke="#ABB6CC" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="city-change__cities">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="improveModal" tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered improve-modal">
+        <div class="city-change modal-content">
+            <button type="button" class="city-change__close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="modal__header improve-modal__header">
+                <p class="city-change__title">Что улучшить в оформлении заказа?</p>
+            </div>
+            <div class="modal__body city-change__body">
+                <form action="#" class="improve-form">
+                    <div class="enter-modal__group">
+                        <div class="form-floating" style="margin-bottom:20px"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required=""></textarea> <label for="reportText">Комментарий</label><div class="invalid-feedback">Введите обращение</div></div>
+            
+                    </div>
+                    <div class="enter-modal__group enter-modal__group--mb-32">
+                      <div class="enter-modal__group-inner">
+                        <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input">
+                        <button type="button" class="modal__clear">
+                          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </button>
+                        <label class="enter-modal__placeholder">Email</label>
+                      </div>
+                    </div>
+                    <div class="modal__policy policy-modal">
+                        <p class="policy-modal__note">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Пользовательским соглашением</a></p> 
+                    </div>
+                    <div class="improve-form__bottom">
+                        <button type="submit" class="improve-form__send button button-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (!('IntersectionObserver' in window)) {
+        var script = document.createElement("script");
+        script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+</script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>
